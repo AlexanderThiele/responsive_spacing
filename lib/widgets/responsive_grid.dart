@@ -28,7 +28,8 @@ class ResponsiveGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: (Spacing.of(context).layoutColumns.columns / axisSpaces).round(),
+      crossAxisCount:
+          (Spacing.of(context).layoutColumns.columns / axisSpaces).round(),
       padding: Spacing.of(context).allEdgeInsets,
       mainAxisSpacing: Spacing.of(context).gutter.size,
       crossAxisSpacing: Spacing.of(context).gutter.size,

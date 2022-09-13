@@ -2,7 +2,25 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_spacing/widgets/spacing.dart';
 
+/// Responsive Scaffold class
+///
+/// It is basically a Scaffold
+///
 class ResponsiveScaffold extends Scaffold {
+  /// Responsive Scaffold
+  ///
+  /// This scaffold will create an InheritedWidget with Spacing
+  ///
+  /// Usage: `Spacing.of(context)`
+  ///
+  /// ```dart
+  ///   final ScaledSize margin;
+  ///   final ScaledSize padding;
+  ///   final ScaledSize gutter;
+  ///   final ScaledSize body;
+  ///   final LayoutColumns layoutColumns;
+  /// ```
+  ///
   const ResponsiveScaffold({
     Key? key,
     super.appBar,
@@ -34,6 +52,7 @@ class ResponsiveScaffold extends Scaffold {
   ScaffoldState createState() => _ResponsiveScaffoldState();
 }
 
+/// just the state that wraps the Spacing class around the Scaffold
 class _ResponsiveScaffoldState extends ScaffoldState {
   @override
   Widget build(BuildContext context) {

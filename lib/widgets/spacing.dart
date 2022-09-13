@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_spacing/models/responsive_data.dart';
 
+/// Inherited Widget that has the ResponsiveData Class
+///
+/// Use the .of static method to receive the Spacing data
 class Spacing extends InheritedWidget {
   final ResponsiveData responsiveData;
 
+  /// generates the responsiveData
   Spacing({
     required BuildContext context,
     required super.child,
@@ -23,4 +27,3 @@ class Spacing extends InheritedWidget {
         ResponsiveData.standard();
   }
 }
-

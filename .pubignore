@@ -1,1 +1,3 @@
 resources/
+example/*
+!example/example.md

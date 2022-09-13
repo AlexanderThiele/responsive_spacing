@@ -1,6 +1,6 @@
 name: responsive_spacing
 description: Make your app responsive with dynamic margin, padding, gutter, body-size & columns.
-version: 0.1.0
+version: 0.1.1
 homepage: https://www.thiele.dev
 
 environment:

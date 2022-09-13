@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_spacing/extensions/scaled_size_extension.dart';
 import 'package:responsive_spacing/widgets/spacing.dart';
 
+/// It is basically a Card
 class ResponsiveCard extends Card {
+  /// This card adds padding around the Card to fit the sizes
   const ResponsiveCard({
     Key? key,
     super.color,

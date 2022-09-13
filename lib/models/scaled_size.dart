@@ -13,17 +13,16 @@ abstract class ScaledSize {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is ScaledSize &&
-              runtimeType == other.runtimeType &&
-              isFlexible == other.isFlexible &&
-              size == other.size;
+      other is ScaledSize &&
+          runtimeType == other.runtimeType &&
+          isFlexible == other.isFlexible &&
+          size == other.size;
 
   @override
   int get hashCode => isFlexible.hashCode ^ size.hashCode;
 }
 
 class ScaledBody extends ScaledSize {
-
   static ScaledBody find(double screenWidth) {
     if (screenWidth >= 1440) {
       return ScaledBody.lg();
@@ -62,7 +61,6 @@ class ScaledBody extends ScaledSize {
 }
 
 class ScaledMargin extends ScaledSize {
-
   static ScaledMargin find(double screenWidth) {
     if (screenWidth >= 1440) {
       return ScaledMargin.lg(screenWidth);
@@ -100,7 +98,6 @@ class ScaledMargin extends ScaledSize {
 }
 
 class ScaledPadding extends ScaledSize {
-
   static ScaledPadding find(double screenWidth) {
     if (screenWidth >= 1440) {
       return ScaledPadding.lg();
@@ -120,15 +117,13 @@ class ScaledPadding extends ScaledSize {
   ScaledPadding.standard() : super(isFlexible: false, size: 8);
 
   /// Large 1440+ screens
-  ScaledPadding.lg()
-      : super(isFlexible: false, size: 24);
+  ScaledPadding.lg() : super(isFlexible: false, size: 24);
 
   /// 1240 - 1439
   ScaledPadding.md() : super(isFlexible: false, size: 24);
 
   /// 905 - 1239
-  ScaledPadding.sm2()
-      : super(isFlexible: false, size: 16);
+  ScaledPadding.sm2() : super(isFlexible: false, size: 16);
 
   /// 600 - 904
   ScaledPadding.sm1() : super(isFlexible: false, size: 16);
@@ -138,7 +133,6 @@ class ScaledPadding extends ScaledSize {
 }
 
 class ScaledGutter extends ScaledSize {
-
   static ScaledGutter find(double screenWidth) {
     if (screenWidth >= 1440) {
       return ScaledGutter.lg();
@@ -172,4 +166,3 @@ class ScaledGutter extends ScaledSize {
   /// 0 - 599
   ScaledGutter.xs() : super(isFlexible: false, size: 8);
 }
-

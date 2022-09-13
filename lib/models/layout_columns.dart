@@ -1,6 +1,5 @@
-class LayoutColumns{
+class LayoutColumns {
   int columns;
-
 
   static LayoutColumns find(double screenWidth) {
     if (screenWidth >= 1440) {
