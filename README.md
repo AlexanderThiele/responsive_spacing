@@ -10,18 +10,18 @@ We have developed this plugin so that you can easily create your own responsive 
 
 The responsive layout grid is made up of three elements: columns, gutters, and margins. Read everything about Columns, Gutters & Margins on the [material guidelines responsive layout page](https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins).
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/columns-gutter-margin.png" alt="columns, gutter, margin"/>
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/columns-gutter-margin.png" alt="columns, gutter, margin"/>
 
 ## default Sizes
 The [Material Breakpoints](https://material.io/design/layout/responsive-layout-grid.html#breakpoints) are used for all default values.   
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/default-values.png" alt="default"/>
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/default-values.png" alt="default"/>
 
 As an example, the 360 size display has 4 columns, a margin of 16, padding of 8 & gutters of 8.
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/360.png" alt="default"/>
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/360.png" alt="default"/>
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/600.png" alt="default"/>
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/600.png" alt="default"/>
 
 The responsive values are saved to the ResponsiveData class:
 
@@ -35,7 +35,7 @@ class ResponsiveData {
 }
 ```
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/layout_transform.gif" alt="Responsive App"/>
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/layout_transform.gif" alt="Responsive App"/>
 
 ## Usage
 
