@@ -1,19 +1,29 @@
-# responsive_spacing Flutter Plugin
 This plugin helps to design and develop beautiful responsive flutter apps.
 
-## Responsive Spacing, the easy way
+## Lightweight, Responsive Spacing
 
 All design principles have roughly the same elements. For example, Material Design has a responsive 12 column system that works with margin, gutter & body.
 
-We have developed this plugin so that you can easily create your own responsive app. 
+We have developed this plugin so that you can easily create your own responsive app.
 
-We scale the following:
+## Columns, Gutters & Margins
 
-* Margin,
-* Padding,
-* Gutter,
-* Body,
-* Layout Columns
+The responsive layout grid is made up of three elements: columns, gutters, and margins. Read everything about Columns, Gutters & Margins on the [material guidelines responsive layout page](https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins).
+
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/columns-gutter-margin.png" alt="columns, gutter, margin"/>
+
+## default Sizes
+The [Material Breakpoints](https://material.io/design/layout/responsive-layout-grid.html#breakpoints) are used for all default values.   
+
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/default-values.png" alt="default"/>
+
+As an example, the 360 size display has 4 columns, a margin of 16, padding of 8 & gutters of 8.
+
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/360.png" alt="default"/>
+
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/600.png" alt="default"/>
+
+The responsive values are saved to the ResponsiveData class:
 
 ```dart
 class ResponsiveData {
@@ -66,9 +76,4 @@ Card(
 )
 ```
 
-## Columns, Gutter & Margin
-
-Read everything about Columns, Gutter & Margins on the [material guidelines responsive layout page](https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins).
-
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/master/resources/columns-gutter-margin.png" alt="columns, gutter, margin"/>
 
