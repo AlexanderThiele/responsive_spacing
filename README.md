@@ -81,3 +81,14 @@ Card(
 ```
 
 
+## Available Responsive Widgets
+There are two types of widgets, the data widgets that create the spacing context and widgets that use the spacing context.
+
+## Data Widgets
+Data widgets create the spacing context and provide responsive values to all widgets created in the tree below. if there are multiple data widgets in the tree, the closest one is taken.
+
+* ResponsiveScaffold
+
+## Widgets
+* ResponsiveCard
+* ResponsiveGrid
