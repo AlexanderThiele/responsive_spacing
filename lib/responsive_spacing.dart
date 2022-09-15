@@ -13,4 +13,3 @@ export 'package:responsive_spacing/models/scaled_size.dart';
 export 'package:responsive_spacing/models/responsive_collection.dart';
 export 'package:responsive_spacing/models/responsive_layout_columns.dart';
 export 'package:responsive_spacing/extensions/theme_extension.dart';
-
