@@ -1,5 +1,3 @@
-library responsive_spacing;
-
 import 'package:responsive_spacing/models/breakpoints.dart';
 import 'package:responsive_spacing/models/responsive_collection.dart';
 import 'package:responsive_spacing/models/responsive_layout_columns.dart';
