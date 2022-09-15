@@ -1,3 +1,7 @@
+## 0.2.0
+* customize your own breakpoints
+* customize your gutters, paddings, margins and body
+
 ## 0.1.2
 * Just readme update
 

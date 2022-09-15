@@ -9,10 +9,10 @@ class Spacing extends InheritedWidget {
 
   /// generates the responsiveData
   Spacing({
-    required BuildContext context,
+    required double width,
     required super.child,
     Key? key,
-  })  : responsiveData = ResponsiveData(context),
+  })  : responsiveData = ResponsiveData(width),
         super(key: key);
 
   @override
@@ -24,6 +24,6 @@ class Spacing extends InheritedWidget {
     return context
             .dependOnInheritedWidgetOfExactType<Spacing>()
             ?.responsiveData ??
-        ResponsiveData.standard();
+        ResponsiveData.fallback();
   }
 }

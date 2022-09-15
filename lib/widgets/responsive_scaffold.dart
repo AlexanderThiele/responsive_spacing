@@ -56,6 +56,11 @@ class ResponsiveScaffold extends Scaffold {
 class _ResponsiveScaffoldState extends ScaffoldState {
   @override
   Widget build(BuildContext context) {
-    return Spacing(context: context, child: super.build(context));
+    return LayoutBuilder(
+      builder: (context, constraints) => Spacing(
+        width: constraints.maxWidth,
+        child: super.build(context),
+      ),
+    );
   }
 }

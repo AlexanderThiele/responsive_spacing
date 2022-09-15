@@ -30,7 +30,7 @@ class ResponsiveGrid extends StatelessWidget {
     return GridView.count(
       crossAxisCount:
           (Spacing.of(context).layoutColumns.columns / axisSpaces).round(),
-      padding: Spacing.of(context).allEdgeInsets,
+      padding: Spacing.of(context).horizontalEdgeInsets,
       mainAxisSpacing: Spacing.of(context).gutter.size,
       crossAxisSpacing: Spacing.of(context).gutter.size,
       scrollDirection: scrollDirection,

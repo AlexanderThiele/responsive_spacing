@@ -3,8 +3,9 @@ This plugin helps to design and develop beautiful responsive and adaptive flutte
 ## Lightweight, Responsive Spacing
 
 All design principles have roughly the same elements. For example, Material Design has a responsive 12 column system that works with margin, gutter & body.
+Our default values are set in the Material Design Guidelines, but you can also easily set your own breakpoints, margins, and spacing. 
 
-We have developed this plugin so that you can easily create your own responsive app.
+We have developed this plugin so that you can easily make your app adaptive and responsive.
 
 ## Columns, Gutters & Margins
 
@@ -80,6 +81,75 @@ Card(
 )
 ```
 
+## Custom Adaptive Breakpoints
+You can also customize your own breakpoints. The default values are Material Design screen sizes:
+
+* xl: 1920, disabled
+* lg: 1440, enabled
+* md: 1240, enabled
+* sm2: 905, enabled
+* sm1: 600, enabled
+* xs: from 0 to sm1, always enabled
+
+To customize, use the setDefaults method in your main:
+```dart
+void main() {
+  ResponsiveSpacing.setDefaults(
+    globalBreakpoints: Breakpoints(
+      xl: const BreakpointEntry(2560, enabled: true),
+      lg: const BreakpointEntry(1440),
+      md: const BreakpointEntry(1240),
+      sm2: const BreakpointEntry(905),
+      sm1: const BreakpointEntry(600),
+    ),
+  );
+
+  runApp(const MyApp());
+}
+```
+
+## Custom Padding, Gutter, Body & Margin
+
+Just like the custom breakpoints, you can also set your own spacing, spaces, and margins. Create your own gutter class by extending `ResponsiveCollection`:
+
+```dart
+class MyResponsiveGutters extends ResponsiveCollection {
+  @override
+  ScaledSize fallback(double width) => const ScaledSize(size: 8);
+
+  @override
+  ScaledSize lg(double width) => const ScaledSize(size: 8);
+
+  @override
+  ScaledSize md(double width) => const ScaledSize(size: 8);
+
+  @override
+  ScaledSize sm1(double width) => const ScaledSize(size: 8);
+
+  @override
+  ScaledSize sm2(double width) => const ScaledSize(size: 8);
+
+  @override
+  ScaledSize xl(double width) => const ScaledSize(size: 8);
+
+  @override
+  ScaledSize xs(double width) => const ScaledSize(size: 8);
+}
+```
+
+And overwrite the default global gutters in your main:
+
+```dart
+void main() {
+  // optional setting defaults
+  ResponsiveSpacing.setDefaults(
+    globalGutter: MyResponsiveGutters(),
+    globalPadding: MyResponsivePadding()
+  );
+
+  runApp(const MyApp());
+}
+```
 
 ## Available Responsive Widgets
 There are two types of widgets, the data widgets that create the spacing context and widgets that use the spacing context.
