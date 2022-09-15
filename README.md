@@ -59,19 +59,29 @@ And in your Widget, access the Spacing class with `Spacing.of(context)` which re
 
 ```dart
 ResponsiveData responsiveData = Spacing.of(context);
+// Access your responsive properties:
+responsiveData.margin;
+responsiveData.padding;
+responsiveData.gutter;
+responsiveData.body;
+responsiveData.layoutColumns;
+
+// You are now good to use these properties in your layout.
 ```
 
 For example with a Card:
 
 ```dart
 Card(
-  /// Spacing outside the card
+  // use margin
   margin: Spacing.of(context).margin.horizontalEdgeInsets,
+
   child: Padding(
-  /// Spacing inside the card
+
+    // use padding
     padding: Spacing.of(context).padding.allEdgeInsets,
+    
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("This is a Title"),
         Text("This is the subtitle, usually you explain something")
