@@ -1,7 +1,9 @@
 name: responsive_spacing
 description: Make your app responsive & adaptive with dynamic margins, paddings, gutters, body-size & columns.
-version: 0.2.0
+version: 0.2.1
 homepage: https://www.thiele.dev
+repository: https://github.com/AlexanderThiele/responsive_spacing
+issue_tracker: https://github.com/AlexanderThiele/responsive_spacing/issues
 
 environment:
   sdk: ">=2.17.5 <3.0.0"

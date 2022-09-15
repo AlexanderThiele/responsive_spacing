@@ -1,3 +1,6 @@
+## 0.2.1
+* pubspec update, readme update
+
 ## 0.2.0
 * customize your own breakpoints
 * customize your gutters, paddings, margins and body

@@ -1,3 +1,4 @@
+/// Make your app responsive & adaptive with dynamic margins, paddings, gutters, body-size & columns.
 library responsive_spacing;
 
 export 'package:responsive_spacing/responsive_spacing_main.dart';
