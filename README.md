@@ -36,8 +36,6 @@ As an example, the 360 size display has 4 columns, a margin of 16, padding of 8 
 
 <img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/360.png" alt="default" width="600"/>
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/600.png" alt="default" width="600"/>
-
 If you combine this now, you get a responsive layout. See it in action:
 
 <img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/layout_transform.gif" alt="Responsive App" width="600"/>
