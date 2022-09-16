@@ -7,6 +7,20 @@ Our default values are set in the Material Design Guidelines, but you can also e
 
 We have developed this plugin so that you can easily make your app adaptive and responsive.
 
+Quick Example: Access global padding setting in your widget:
+
+```dart
+Spacing.of(context).padding
+```
+
+You get padding for different screen sizes:
+* lg (1440+) = 24
+* md (1240+) = 24
+* sm (600+) = 16
+* xs (<600) = 8
+
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/padding.png" alt="columns, gutter, margin" width="708"/>
+
 ## Columns, Gutters & Margins
 
 The responsive layout grid is made up of three elements: columns, gutters, and margins. Read everything about Columns, Gutters & Margins on the [material guidelines responsive layout page](https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins).
@@ -28,23 +42,9 @@ If you combine this now, you get a responsive layout. See it in action:
 
 <img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/layout_transform.gif" alt="Responsive App" width="600"/>
 
-## Data 
-Everything you need is stored in the `ResponsiveData` class which is accessible via the context.
-
-```dart
-class ResponsiveData {
-  final ScaledSize margin;
-  final ScaledSize padding;
-  final ScaledSize gutter;
-  final ScaledSize body;
-  final LayoutColumns layoutColumns;
-  // ...
-}
-```
-
 ## Usage
 
-Instead of using a Scaffold, use the ResponsiveScaffold:
+Instead of using a `Scaffold`, use the `ResponsiveScaffold`:
 
 ```dart
 ResponsiveScaffold(
@@ -125,25 +125,25 @@ Just like the custom breakpoints, you can also set your own spacing, spaces, and
 ```dart
 class MyResponsiveGutters extends ResponsiveCollection {
   @override
-  ScaledSize fallback(double width) => const ScaledSize(size: 8);
+  ScaledSize xl(double width) => const ScaledSize(size: 16);
 
   @override
-  ScaledSize lg(double width) => const ScaledSize(size: 8);
+  ScaledSize lg(double width) => const ScaledSize(size: 16);
 
   @override
   ScaledSize md(double width) => const ScaledSize(size: 8);
 
   @override
-  ScaledSize sm1(double width) => const ScaledSize(size: 8);
+  ScaledSize sm2(double width) => const ScaledSize(size: 4);
 
   @override
-  ScaledSize sm2(double width) => const ScaledSize(size: 8);
+  ScaledSize sm1(double width) => const ScaledSize(size: 4);
 
   @override
-  ScaledSize xl(double width) => const ScaledSize(size: 8);
+  ScaledSize xs(double width) => const ScaledSize(size: 2);
 
   @override
-  ScaledSize xs(double width) => const ScaledSize(size: 8);
+  ScaledSize fallback(double width) => const ScaledSize(size: 2);
 }
 ```
 
@@ -158,6 +158,20 @@ void main() {
   );
 
   runApp(const MyApp());
+}
+```
+
+## Data Class
+Everything you need is stored in the `ResponsiveData` class which is accessible via the context.
+
+```dart
+class ResponsiveData {
+  final ScaledSize margin;
+  final ScaledSize padding;
+  final ScaledSize gutter;
+  final ScaledSize body;
+  final LayoutColumns layoutColumns;
+  // ...
 }
 ```
 
