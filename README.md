@@ -7,17 +7,17 @@ Our default values are set in the Material Design Guidelines, but you can also e
 
 We have developed this plugin so that you can easily make your app adaptive and responsive.
 
-Quick Example: Access global padding setting in your widget:
+### Quick Example: Access global padding setting in your widget:
 
 ```dart
 Spacing.of(context).padding
 ```
 
-You get padding for different screen sizes:
-* lg (1440+) = 24
-* md (1240+) = 24
-* sm (600+) = 16
-* xs (<600) = 8
+Receive padding for screen sizes:
+* lg = 24
+* md = 24
+* sm = 16
+* xs = 8
 
 <img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/padding.png" alt="columns, gutter, margin" width="708"/>
 
