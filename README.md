@@ -19,7 +19,7 @@ Receive padding for screen sizes:
 * sm = 16
 * xs = 8
 
-<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/padding.png" alt="columns, gutter, margin" width="708"/>
+<img src="https://raw.githubusercontent.com/AlexanderThiele/responsive_spacing/main/resources/padding.png" alt="columns, gutter, margin" width="600"/>
 
 ## Columns, Gutters & Margins
 
