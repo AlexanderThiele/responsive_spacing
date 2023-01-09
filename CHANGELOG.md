@@ -1,3 +1,6 @@
+## 0.2.2
+* readme update. changed default specs
+
 ## 0.2.1
 * pubspec update, readme update
 

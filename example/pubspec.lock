@@ -105,10 +105,10 @@ packages:
   responsive_spacing:
     dependency: "direct dev"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.1.2"
+      name: responsive_spacing
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   sky_engine:
     dependency: transitive
     description: flutter
