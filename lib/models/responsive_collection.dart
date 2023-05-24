@@ -1,10 +1,10 @@
 import 'package:responsive_spacing/responsive_spacing.dart';
 
-/// Extension to for no overwrite
+/// Extension so that it cannot be overwritten by users
 ///
 /// adds the find function which selects the right value
-extension ResponsiveCollectionFind on ResponsiveCollection {
-  ScaledSize find(double width) {
+extension ResponsiveCollectionFind<T> on ResponsiveCollection<T> {
+  T find(double width) {
     Breakpoints globalBreakpoints = ResponsiveSpacing.globalBreakpoints;
     if (globalBreakpoints.xl.enabled && width >= globalBreakpoints.xl.width) {
       return xl(width);
@@ -28,25 +28,23 @@ extension ResponsiveCollectionFind on ResponsiveCollection {
 /// Main Collection class
 ///
 /// Overwrite to create your own
-abstract class ResponsiveCollection {
-  ScaledSize xs(double width);
+abstract class ResponsiveCollection<T> {
+  T xs(double width);
 
-  ScaledSize sm1(double width);
+  T sm1(double width);
 
-  ScaledSize sm2(double width);
+  T sm2(double width);
 
-  ScaledSize md(double width);
+  T md(double width);
 
-  ScaledSize lg(double width);
+  T lg(double width);
 
-  ScaledSize xl(double width);
-
-  ScaledSize fallback(double width);
+  T xl(double width);
 
   const ResponsiveCollection();
 }
 
-class ResponsiveBodyCollection extends ResponsiveCollection {
+class ResponsiveBodyCollection extends ResponsiveCollection<ScaledSize> {
   const ResponsiveBodyCollection();
 
   @override
@@ -67,11 +65,9 @@ class ResponsiveBodyCollection extends ResponsiveCollection {
   @override
   ScaledSize xs(double width) => ScaledBody.xs(width);
 
-  @override
-  ScaledSize fallback(double width) => const ScaledBody.fallback();
 }
 
-class ResponsiveMarginCollection extends ResponsiveCollection {
+class ResponsiveMarginCollection extends ResponsiveCollection<ScaledSize> {
   const ResponsiveMarginCollection();
 
   @override
@@ -91,12 +87,9 @@ class ResponsiveMarginCollection extends ResponsiveCollection {
 
   @override
   ScaledSize xs(double width) => const ScaledMargin.xs();
-
-  @override
-  ScaledSize fallback(double width) => const ScaledMargin.fallback();
 }
 
-class ResponsivePaddingCollection extends ResponsiveCollection {
+class ResponsivePaddingCollection extends ResponsiveCollection<ScaledSize> {
   const ResponsivePaddingCollection();
 
   @override
@@ -116,12 +109,9 @@ class ResponsivePaddingCollection extends ResponsiveCollection {
 
   @override
   ScaledSize xs(double width) => const ScaledMargin.xs();
-
-  @override
-  ScaledSize fallback(double width) => const ScaledMargin.fallback();
 }
 
-class ResponsiveGutterCollection extends ResponsiveCollection {
+class ResponsiveGutterCollection extends ResponsiveCollection<ScaledSize> {
   const ResponsiveGutterCollection();
 
   @override
@@ -141,7 +131,4 @@ class ResponsiveGutterCollection extends ResponsiveCollection {
 
   @override
   ScaledSize xs(double width) => const ScaledGutter.xs();
-
-  @override
-  ScaledSize fallback(double width) => const ScaledGutter.fallback();
 }

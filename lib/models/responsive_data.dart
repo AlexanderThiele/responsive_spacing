@@ -14,14 +14,4 @@ class ResponsiveData {
         body = ResponsiveSpacing.globalBody.find(width),
         layoutColumns = ResponsiveSpacing.globalColumns.find(width);
 
-  ResponsiveData.fallback()
-      : margin = const ScaledMargin.fallback(),
-        padding = const ScaledPadding.fallback(),
-        gutter = const ScaledGutter.fallback(),
-        body = const ScaledBody.fallback(),
-        layoutColumns = const LayoutColumns.fallback() {
-    // ignore: avoid_print
-    print(
-        "WARNING: Standard responsive scaling is used. This usually happens if you use don't use the ResponsiveScaffold or the wrong context.");
-  }
 }

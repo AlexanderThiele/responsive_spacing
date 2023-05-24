@@ -17,7 +17,6 @@ class ScaledSize {
 }
 
 class ScaledBody extends ScaledSize {
-  const ScaledBody.fallback() : super(isFlexible: true, size: 0);
 
   /// Large 1920+ screens
   const ScaledBody.xl() : super(isFlexible: false, size: 1040);
@@ -42,7 +41,6 @@ class ScaledBody extends ScaledSize {
 }
 
 class ScaledMargin extends ScaledSize {
-  const ScaledMargin.fallback() : super(isFlexible: false, size: 16);
 
   /// Large 1920+ screens
   const ScaledMargin.xl(double width)
@@ -67,7 +65,6 @@ class ScaledMargin extends ScaledSize {
 }
 
 class ScaledPadding extends ScaledSize {
-  const ScaledPadding.fallback() : super(isFlexible: false, size: 8);
 
   /// Large 1920+ screens
   const ScaledPadding.xl() : super(isFlexible: false, size: 24);
@@ -89,7 +86,6 @@ class ScaledPadding extends ScaledSize {
 }
 
 class ScaledGutter extends ScaledSize {
-  const ScaledGutter.fallback() : super(isFlexible: false, size: 16);
 
   /// Large 1920+ screens
   const ScaledGutter.xl() : super(isFlexible: false, size: 16);

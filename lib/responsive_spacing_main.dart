@@ -2,6 +2,9 @@ import 'package:responsive_spacing/models/breakpoints.dart';
 import 'package:responsive_spacing/models/responsive_collection.dart';
 import 'package:responsive_spacing/models/responsive_layout_columns.dart';
 
+import 'models/giga_spacing.dart';
+import 'models/simple_spacing.dart';
+
 /// Global Responsive Settings class
 ///
 /// Set your own defaults by calling [setDefaults] in your main.
@@ -27,23 +30,26 @@ abstract class ResponsiveSpacing {
   /// Global Breakpoints
   static Breakpoints globalBreakpoints = Breakpoints();
 
+  // Spacings
+  static SpacingCollection globalSpacing = const SpacingCollection();
+  static GigaSpacingCollection globalGigaSpacing = const GigaSpacingCollection();
+
   /// Global Responsive Functions
   static ResponsiveCollection globalBody = const ResponsiveBodyCollection();
   static ResponsiveCollection globalMargin = const ResponsiveMarginCollection();
-  static ResponsiveCollection globalPadding =
-      const ResponsivePaddingCollection();
+  static ResponsiveCollection globalPadding = const ResponsivePaddingCollection();
   static ResponsiveCollection globalGutter = const ResponsiveGutterCollection();
-  static ResponsiveLayoutColumnCollection globalColumns =
-      const ResponsiveLayoutColumnCollection();
+
+  static ResponsiveLayoutColumnCollection globalColumns = const ResponsiveLayoutColumnCollection();
 
   /// Overwrite the default values if needed.
+  ///
+  /// An Example of SimpleSpacing would be
   ///
   /// An Example of [globalGutter] would be:
   ///
   /// ```dart
   /// class MyResponsiveGutters extends ResponsiveCollection {
-  ///   @override
-  ///   ScaledSize fallback(double width) => const ScaledSize(size: 8);
   ///
   ///   @override
   ///   ScaledSize lg(double width) => const ScaledSize(size: 8);
@@ -66,6 +72,8 @@ abstract class ResponsiveSpacing {
   /// ```
   static setDefaults({
     Breakpoints? globalBreakpoints,
+    SpacingCollection? globalSpacing,
+    GigaSpacingCollection? globalGigaSpacing,
     ResponsiveCollection? globalBody,
     ResponsiveCollection? globalMargin,
     ResponsiveCollection? globalPadding,
@@ -74,6 +82,12 @@ abstract class ResponsiveSpacing {
   }) {
     if (globalBreakpoints != null) {
       ResponsiveSpacing.globalBreakpoints = globalBreakpoints;
+    }
+    if (globalGigaSpacing != null) {
+      ResponsiveSpacing.globalGigaSpacing = globalGigaSpacing;
+    }
+    if (globalSpacing != null) {
+      ResponsiveSpacing.globalSpacing = globalSpacing;
     }
     if (globalBody != null) {
       ResponsiveSpacing.globalBody = globalBody;

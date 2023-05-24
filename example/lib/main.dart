@@ -1,23 +1,25 @@
 import 'package:example/responsive_collection/responsive_gutter.dart';
 import 'package:example/responsive_collection/responsive_padding.dart';
+import 'package:example/spacings/my_giga_spacing.dart';
+import 'package:example/spacings/my_simple_spacing.dart';
 import 'package:example/widgets/show_all_container.dart';
 import 'package:flutter/material.dart';
-
 import 'package:responsive_spacing/responsive_spacing.dart';
 
 void main() {
   // optional setting defaults
   ResponsiveSpacing.setDefaults(
-    globalBreakpoints: Breakpoints(
-      xl: const BreakpointEntry(1920, enabled: true),
-      lg: const BreakpointEntry(1440),
-      md: const BreakpointEntry(1240),
-      sm2: const BreakpointEntry(905),
-      sm1: const BreakpointEntry(600),
-    ),
-    globalGutter: MyResponsiveGutters(),
-    globalPadding: MyResponsivePadding()
-  );
+      globalSpacing: MySimpleSpacing(),
+      globalGigaSpacing: MyGigaSpacing(),
+      globalBreakpoints: Breakpoints(
+        xl: const BreakpointEntry(1920, enabled: true),
+        lg: const BreakpointEntry(1440),
+        md: const BreakpointEntry(1240),
+        sm2: const BreakpointEntry(905),
+        sm1: const BreakpointEntry(600),
+      ),
+      globalGutter: MyResponsiveGutters(),
+      globalPadding: MyResponsivePadding());
 
   runApp(const MyApp());
 }
@@ -58,26 +60,23 @@ class CardList extends StatelessWidget {
     return ListView(
       children: [
         const ShowAllContainer(),
-        Container(
-            height: 1, decoration: const BoxDecoration(color: Colors.grey)),
-        Spacing.of(context).sizedBoxGutter,
+        Container(height: 1, decoration: const BoxDecoration(color: Colors.grey)),
+        context.spacingConfig.sizedBoxGutter,
         ResponsiveCard(
           color: Colors.amber,
           child: Padding(
-            padding: Spacing.of(context).padding.allEdgeInsets,
+            padding: context.spacingConfig.padding.allEdgeInsets,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("This is a ResponsiveCard",
-                    style: Theme.of(context).textTheme.titleLarge),
-                const SizedBox(height: 8),
-                Text("This is a subtitle, usually you explain something",
-                    style: Theme.of(context).textTheme.bodyMedium)
+                Text("This is a ResponsiveCard", style: Theme.of(context).textTheme.titleLarge),
+                SizedBox(height: context.gigaSpacing.s),
+                Text("This is a subtitle, usually you explain something", style: Theme.of(context).textTheme.bodyMedium)
               ],
             ),
           ),
         ),
-        Spacing.of(context).sizedBoxGutter,
+        context.spacingConfig.sizedBoxGutter,
         ResponsiveGrid(
           primary: false,
           shrinkWrap: true,
@@ -86,12 +85,11 @@ class CardList extends StatelessWidget {
               margin: EdgeInsets.zero,
               color: Colors.amber,
               child: Padding(
-                padding: Spacing.of(context).padding.allEdgeInsets,
+                padding: context.spacingConfig.padding.allEdgeInsets,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("This is a Card inside a ResponsiveGrid",
-                        style: Theme.of(context).textTheme.titleSmall),
+                    Text("This is a Card inside a ResponsiveGrid", style: Theme.of(context).textTheme.titleSmall),
                   ],
                 ),
               ),
@@ -102,7 +100,7 @@ class CardList extends StatelessWidget {
               )
           ],
         ),
-        Spacing.of(context).sizedBoxGutter,
+        context.spacingConfig.sizedBoxGutter,
         ResponsiveGrid(
           primary: false,
           shrinkWrap: true,
@@ -127,20 +125,18 @@ class CardList extends StatelessWidget {
             ),
           ],
         ),
-        Spacing.of(context).sizedBoxGutter,
+        context.spacingConfig.sizedBoxGutter,
         Card(
           color: Colors.amber,
-          margin: Spacing.of(context).margin.horizontalEdgeInsets,
+          margin: context.spacingConfig.margin.horizontalEdgeInsets,
           child: Padding(
-            padding: Spacing.of(context).padding.allEdgeInsets,
+            padding: context.spacingConfig.padding.allEdgeInsets,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("This is a Card",
-                    style: Theme.of(context).textTheme.titleLarge),
-                const SizedBox(height: 8),
-                Text("This is a subtitle, usually you explain something",
-                    style: Theme.of(context).textTheme.bodyMedium)
+                Text("This is a Card", style: Theme.of(context).textTheme.titleLarge),
+                SizedBox(height: context.gigaSpacing.s),
+                Text("This is a subtitle, usually you explain something", style: Theme.of(context).textTheme.bodyMedium)
               ],
             ),
           ),

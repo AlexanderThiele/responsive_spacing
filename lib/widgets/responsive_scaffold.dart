@@ -4,7 +4,7 @@ import 'package:responsive_spacing/widgets/spacing.dart';
 
 /// Responsive Scaffold class
 ///
-/// It is basically a Scaffold
+/// It is just a wrapped Scaffold
 ///
 class ResponsiveScaffold extends Scaffold {
   /// Responsive Scaffold

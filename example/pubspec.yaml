@@ -13,9 +13,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  responsive_spacing: ^0.2.1
-    #path: ../
+  responsive_spacing: ^0.2.2
   flutter_lints: ^2.0.1
+
+dependency_overrides:
+  responsive_spacing:
+    path: ../
 
 flutter:
   uses-material-design: true
