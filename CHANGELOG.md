@@ -1,5 +1,6 @@
 ## 1.0.0
-* Flutter 3.10 ready.
+* Flutter 2.10 ready.
+* Dart 3.0 ready.
 * Added spacings, gigaSpacings
 
 ```dart

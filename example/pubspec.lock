@@ -118,10 +118,11 @@ packages:
   responsive_spacing:
     dependency: "direct dev"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.2.2"
+      name: responsive_spacing
+      sha256: f9042de2572b8bf8be79965a152a75c846b4241bf0e49d2919bac67aa3921f28
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -185,3 +186,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=3.0.0-0 <4.0.0"
+  flutter: ">=1.17.0"

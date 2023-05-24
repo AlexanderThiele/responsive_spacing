@@ -13,7 +13,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  responsive_spacing: ^0.2.2
+  responsive_spacing: ^1.0.0
   flutter_lints: ^2.0.1
 
 dependency_overrides:
