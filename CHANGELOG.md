@@ -1,3 +1,25 @@
+## 1.0.0
+* Flutter 3.10 ready.
+* Added spacings, gigaSpacings
+
+```dart
+// Example values for a Pixel 7 Pro
+context.spacing.xs; // default 2
+context.spacing.s; // default 8
+context.spacing.m; // default 12
+context.spacing.l; // default 16
+context.spacing.xl; // default 32
+context.spacing.xxl; // default 56
+
+// Example:
+
+// Instead of 
+SizedBox(height: 8);
+
+// use
+SizedBox(height: context.spacing.s); // Wow!
+```
+
 ## 0.2.2
 * readme update. changed default specs
 
