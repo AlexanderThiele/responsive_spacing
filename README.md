@@ -11,9 +11,10 @@ We have developed this plugin so that you can easily make your app adaptive and 
 
 ## Simple Spacing
 
-Access your own Spacing System that changes on screen width. 
+Access your own Spacing-System:
 
 ```dart
+// Example values for a Pixel 7 Pro
 context.spacing.xs; // default 2
 context.spacing.s; // default 8
 context.spacing.m; // default 12
@@ -22,6 +23,7 @@ context.spacing.xl; // default 32
 context.spacing.xxl; // default 56
 
 // Example:
+
 // Instead of 
 SizedBox(height: 8);
 
@@ -31,7 +33,7 @@ SizedBox(height: context.spacing.s); // Wow!
 
 And whenever your design guru wants to modify the values, you only have to modify it in a single file.
 
-### Giga Spacing for all design gurus that need more power
+### Giga Spacing for all design chads that need more power
 
 Design Gurus are around the world and you will maybe find one in your own company. If you have such a mysterious creature, use the Giga Spacing class for even more fine tuning.
 
@@ -39,13 +41,13 @@ Design Gurus are around the world and you will maybe find one in your own compan
 context.gigaSpacing.xxxs; // default 2
 context.gigaSpacing.xxs; // default 8
 context.gigaSpacing.xs; // default 10
-context.spacing.s; // default 12
-context.spacing.m; // default 16
-context.spacing.l; // default 24
-context.spacing.xl; // default 30
-context.spacing.xxl; // default 40
-context.spacing.xxxl; // default 46
-context.spacing.xxxxl; // default 64
+context.gigaSpacing.s; // default 12
+context.gigaSpacing.m; // default 16
+context.gigaSpacing.l; // default 24
+context.gigaSpacing.xl; // default 30
+context.gigaSpacing.xxl; // default 40
+context.gigaSpacing.xxxl; // default 46
+context.gigaSpacing.xxxxl; // default 64
 ```
 
 ### Set Your Custom Spacings

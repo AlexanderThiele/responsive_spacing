@@ -10,10 +10,4 @@ class MySimpleSpacing extends SpacingCollection {
         xl: 32.0,
         xxl: 56.0,
       );
-
-  @override
-  SimpleSpacing get sm1 => md;
-
-  @override
-  SimpleSpacing get sm2 => md;
 }
