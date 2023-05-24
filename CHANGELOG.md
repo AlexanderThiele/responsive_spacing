@@ -20,6 +20,8 @@ SizedBox(height: 8);
 SizedBox(height: context.spacing.s); // Wow!
 ```
 
+* removed fallback values
+
 ## 0.2.2
 * readme update. changed default specs
 
