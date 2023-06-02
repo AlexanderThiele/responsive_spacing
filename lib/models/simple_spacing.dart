@@ -11,7 +11,7 @@ import 'breakpoints.dart';
 ///
 ///   @override
 ///   SimpleSpacing get any => const SimpleSpacing(
-///     xs: 2.0,
+///     xs: 4.0,
 ///     s: 8.0,
 ///     m: 12.0,
 ///     l: 16.0,
@@ -66,95 +66,89 @@ class SimpleSpacing {
   final double xl;
   final double xxl;
 
+  final double iconSize;
+
   const SimpleSpacing({
-    this.xs = 2.0,
+    this.xs = 4.0,
     this.s = 8.0,
     this.m = 12.0,
     this.l = 16.0,
     this.xl = 32.0,
     this.xxl = 56.0,
+    this.iconSize = 24,
   });
 
   /// Large 1920+ screens
   const SimpleSpacing.xl()
       : this(
-          xs: 2 * 2.0,
+          xs: 2 * 4.0,
           s: 2 * 8.0,
           m: 2 * 12.0,
           l: 2 * 16.0,
           xl: 2 * 32.0,
           xxl: 2 * 56.0,
+          iconSize: 24,
         );
 
   /// Large 1440+ screens
   const SimpleSpacing.lg()
       : this(
-          xs: 2 * 2.0,
+          xs: 2 * 4.0,
           s: 2 * 8.0,
           m: 2 * 12.0,
           l: 2 * 16.0,
           xl: 2 * 32.0,
           xxl: 2 * 56.0,
+          iconSize: 24,
         );
 
   /// 1240 - 1439
   const SimpleSpacing.md()
       : this(
-          xs: 2.0,
+          xs: 4.0,
           s: 8.0,
           m: 12.0,
           l: 16.0,
           xl: 32.0,
           xxl: 56.0,
+          iconSize: 24,
         );
 
   /// 905 - 1239
   const SimpleSpacing.sm2()
       : this(
-          xs: 2.0,
+          xs: 4.0,
           s: 8.0,
           m: 12.0,
           l: 16.0,
           xl: 32.0,
           xxl: 56.0,
+          iconSize: 24,
         );
 
   /// 600 - 904
   const SimpleSpacing.sm1()
       : this(
-          xs: 2.0,
+          xs: 4.0,
           s: 8.0,
           m: 12.0,
           l: 16.0,
           xl: 32.0,
           xxl: 56.0,
+          iconSize: 24,
         );
 
   /// 0 - 599
   const SimpleSpacing.xs()
       : this(
-          xs: 2.0,
+          xs: 4.0,
           s: 8.0,
           m: 12.0,
           l: 16.0,
           xl: 32.0,
           xxl: 56.0,
+          iconSize: 24,
         );
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is SimpleSpacing &&
-          runtimeType == other.runtimeType &&
-          xs == other.xs &&
-          s == other.s &&
-          m == other.m &&
-          l == other.l &&
-          xl == other.xl &&
-          xxl == other.xxl;
-
-  @override
-  int get hashCode => xs.hashCode ^ s.hashCode ^ m.hashCode ^ l.hashCode ^ xl.hashCode ^ xxl.hashCode;
 }
 
 /// Extension so that it cannot be overwritten by users

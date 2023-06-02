@@ -1,3 +1,15 @@
+## 1.1.0
+* context.spacing.xs; // default now to 4
+* added iconSize to simple spacing config
+```dart
+context.spacing.iconSize; // default 24 for any screen
+```
+
+### New Widgets
+* GutterColumn: for use in a column
+* GutterRow: for use in a row
+* PageDivider: It divides the page into 2 widgets, on big screens it places the widgets next to each other, on smaller screens, it places it below each other.
+
 ## 1.0.0
 * Flutter 2.10 ready.
 * Dart 3.0 ready.

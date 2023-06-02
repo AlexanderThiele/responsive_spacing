@@ -34,7 +34,6 @@ class ResponsiveLayoutColumnCollection {
   final LayoutColumns sm2;
   final LayoutColumns sm1;
   final LayoutColumns xs;
-  final LayoutColumns fallback;
 
   const ResponsiveLayoutColumnCollection(
       {this.xl = const LayoutColumns.xl(),
@@ -42,8 +41,7 @@ class ResponsiveLayoutColumnCollection {
       this.md = const LayoutColumns.md(),
       this.sm2 = const LayoutColumns.sm2(),
       this.sm1 = const LayoutColumns.sm1(),
-      this.xs = const LayoutColumns.xs(),
-      this.fallback = const LayoutColumns.fallback()});
+      this.xs = const LayoutColumns.xs()});
 }
 
 class LayoutColumns {
@@ -69,5 +67,4 @@ class LayoutColumns {
   /// 0 - 599
   const LayoutColumns.xs() : columns = 4;
 
-  const LayoutColumns.fallback() : columns = 4;
 }

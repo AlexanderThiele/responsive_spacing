@@ -19,6 +19,4 @@ class MyResponsiveGutters extends ResponsiveCollection {
   @override
   ScaledSize xs(double width) => const ScaledSize(size: 2);
 
-  @override
-  ScaledSize fallback(double width) => const ScaledSize(size: 2);
 }
