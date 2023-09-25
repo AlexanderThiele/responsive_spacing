@@ -64,7 +64,6 @@ class ResponsiveBodyCollection extends ResponsiveCollection<ScaledSize> {
 
   @override
   ScaledSize xs(double width) => ScaledBody.xs(width);
-
 }
 
 class ResponsiveMarginCollection extends ResponsiveCollection<ScaledSize> {
@@ -108,7 +107,7 @@ class ResponsivePaddingCollection extends ResponsiveCollection<ScaledSize> {
   ScaledSize sm1(double width) => const ScaledPadding.sm1();
 
   @override
-  ScaledSize xs(double width) => const ScaledMargin.xs();
+  ScaledSize xs(double width) => const ScaledPadding.xs();
 }
 
 class ResponsiveGutterCollection extends ResponsiveCollection<ScaledSize> {
